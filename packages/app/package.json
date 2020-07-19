@@ -1,7 +1,9 @@
 {
   "name": "app",
   "version": "0.1.0",
-  "private": true,
+  "description": "Fool card game",
+  "author": "Victor Magarlamov",
+  "homepage": "https://victor-magarlamov.github.io/fool/",
   "dependencies": {
     "@fool/lib": "*",
     "@fool/ui": "*",
