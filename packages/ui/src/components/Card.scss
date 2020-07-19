@@ -1,0 +1,56 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 7rem;
+  height: 9rem;
+  background: var(--card-front-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  margin: 0 1px;
+  position: relative;
+
+  &--front:not(&--trump):not(&--active) {
+    cursor: pointer;
+
+    &:hover {
+      transition: transform .3s;
+      transform: translate3d(0px, -10px, 0px);
+    } 
+  }
+
+  &--back {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4JyBoZWlnaHQ9JzgnPg0KICA8cmVjdCB3aWR0aD0nOCcgaGVpZ2h0PSc4JyBmaWxsPSdjb3JuZmxvd2VyYmx1ZScvPg0KICA8cGF0aCBkPSdNMCAwTDggOFpNOCAwTDAgOFonIHN0cm9rZS13aWR0aD0nMC41JyBzdHJva2U9J3doaXRlJy8+DQo8L3N2Zz4=");
+
+    .card-label {
+      display: none;
+    }
+  }
+  
+  &--trump, &--deck {
+    position: absolute;
+  }
+
+  &--trump {
+    transform: rotate(90deg);
+    left: 3rem;
+  }
+
+  &--deck {
+    z-index: 1;
+    box-shadow: .33rem .33rem midnightblue;
+  }
+
+  &--active {
+    z-index: 1;
+    margin-left: -5rem;
+  }
+
+  &--animation {
+    transform-origin: center center;
+    transition: transform .3s ease-in-out;
+    position: absolute;
+    z-index: 1000;
+    will-change: transform;
+  }
+}

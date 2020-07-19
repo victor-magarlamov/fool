@@ -1,0 +1,76 @@
+.start-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+
+  .title {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 170px;
+    height: 250px;
+    border: 1px solid black;
+    box-shadow: .33rem .33rem midnightblue;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4JyBoZWlnaHQ9JzgnPg0KICA8cmVjdCB3aWR0aD0nOCcgaGVpZ2h0PSc4JyBmaWxsPSdjb3JuZmxvd2VyYmx1ZScvPg0KICA8cGF0aCBkPSdNMCAwTDggOFpNOCAwTDAgOFonIHN0cm9rZS13aWR0aD0nMC41JyBzdHJva2U9J3doaXRlJy8+DQo8L3N2Zz4=");
+
+    &__header {
+      font-size: 2.5rem;
+      letter-spacing: .15em;
+      color: white;
+      text-shadow: 1px 1px black;
+      z-index: 100;
+    }
+
+    &__subheader {
+      width: 100%;
+      height: 1.5rem;
+      box-sizing: content-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: .8rem;
+      font-weight: 600;
+      color: yellow;
+      background: tomato;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+    }
+
+    &__header, &__subheader {
+      text-transform: uppercase;
+      letter-spacing: .15em;
+    }
+
+    &__fool {
+      font-size: 4rem;
+    }
+
+    &__fool:before {
+      content: "😜";
+      animation: changeSuit 4s infinite;
+    }
+  }
+}
+
+@keyframes changeSuit {
+  0% {
+    content: "😜";
+    color: white;
+  }
+  50% {
+    content: "😉";
+    color: white;
+  }
+  100% {
+    content: "😉";
+    color: white;
+  }
+}

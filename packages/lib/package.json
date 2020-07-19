@@ -1,0 +1,39 @@
+{
+  "name": "@fool/lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rm -rf dist && mkdir dist && babel ./src -d dist --copy-files",
+    "jest": "jest --coverage --verbose --color",
+    "test": "jest",
+    "lint": "eslint src/**"
+  },
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "jest": {
+    "verbose": true,
+    "modulePathIgnorePatterns": [
+      "helper.js"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.4"
+  },
+  "dependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^24.9.0",
+    "prettier": "^2.0.5"
+  }
+}

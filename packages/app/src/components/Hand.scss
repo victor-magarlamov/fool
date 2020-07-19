@@ -1,0 +1,15 @@
+.hand--1, .hand--2 {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 30%;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.hand--1 {
+  align-items: flex-end;
+}
+
+.hand--2 {
+  align-items: flex-start;
+}
