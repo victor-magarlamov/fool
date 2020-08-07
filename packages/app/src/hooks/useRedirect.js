@@ -12,4 +12,4 @@ export default function () {
   }, [redirectTo, history]);
 
   return setRedirectTo;
-};
+}
