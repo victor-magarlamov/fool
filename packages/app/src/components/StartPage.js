@@ -1,17 +1,13 @@
-import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import React from 'react';
+import useRedirect from '../hooks/useRedirect';
 import './StartPage.scss';
 
 const StartPage = () => {
-  const [redirectTo, setRedirectTo] = useState(null);
+  const setRedirectTo = useRedirect();
 
   const onClickHandler = () => {
     setRedirectTo('/game');
   };
-
-  if (redirectTo) {
-    return <Redirect to={redirectTo} />;
-  }
 
   return (
     <div className="start-page">

@@ -1,20 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
+import useRedirect from '../hooks/useRedirect';
 import './Result.scss';
 
 const Result = ({ fool }) => {
-  const [redirectTo, setRedirectTo] = useState(null);
+  const setRedirectTo = useRedirect();
 
   useEffect(() => {
     setTimeout(() => {
       setRedirectTo('/');
     }, 5000);
-  }, []);
-
-  if (redirectTo) {
-    return <Redirect to={redirectTo} />;
-  }
+  }, [setRedirectTo]);
 
   return (
     <div className="result">

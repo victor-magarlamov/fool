@@ -18,8 +18,7 @@ const Hand = memo(
         />
       ))}
     </div>
-  ),
-  (prevProps, nextProps) => prevProps.cards === nextProps.cards
+  )
 );
 
 Hand.displayName = 'Hand';
